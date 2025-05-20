@@ -11,9 +11,108 @@
     <header class="bg-green-600 text-white py-4">
         <div class="container mx-auto px-4 flex justify-between items-center">
             <a href="#accueil" class="flex items-center space-x-4">
-                <img src="Logo.PNG" alt="Logo Heaven Business" class="h-12 w-auto">
+                <img src="logo.jpg" alt="Logo Heaven Business" class="h-12 w-auto">
                 <h1 class="text-2xl font-bold">Heaven Business</h1>
             </a>
             <nav>
                 <ul class="flex space-x-6">
-                    <li><a href="#accueil" class="hover
+                    <li><a href="#accueil" class="hover:underline">Accueil</a></li>
+                    <li><a href="#a-propos" class="hover:underline">À propos</a></li>
+                    <li><a href="#services" class="hover:underline">Services</a></li>
+                    <li><a href="#contact" class="hover:underline">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="bg-green-100 py-20 text-center">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-4">Transformez vos espaces verts avec Heaven Business</h2>
+            <p class="text-lg mb-6">Aménagement, formation et produits pour un jardinage durable et bio.</p>
+            <a href="#contact" class="bg-green-600 text-white px-6 py-3 rounded-full hover:bg-green-700">Nous contacter</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="a-propos" class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">À propos de nous</h2>
+            <p class="text-lg text-center max-w-2xl mx-auto">
+                Heaven Business est une entreprise dédiée à la création et à l'entretien d'espaces verts durables. Nous proposons des solutions complètes, allant de l'aménagement paysager à la formation en microjardinage, ainsi que la vente de produits bio comme les tables de culture, substrats, semences et engrais.
+            </p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="bg-gray-100 py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Nos Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-2">Aménagement espace vert</h3>
+                    <p>Conception et entretien d'espaces verts pour particuliers et entreprises, avec une approche écologique.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-2">Formation microjardinage</h3>
+                    <p>Apprenez les techniques de microjardinage pour cultiver vos propres légumes et plantes, même en espace réduit.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-2">Vente table de culture</h3>
+                    <p>Tables de culture robustes et pratiques pour optimiser votre espace de jardinage.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-2">Vente de substrat</h3>
+                    <p>Substrats de qualité pour garantir une croissance saine de vos plantes.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-2">Vente de semences</h3>
+                    <p>Semences biologiques pour des cultures variées et respectueuses de l'environnement.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-2">Vente d'engrais bio</h3>
+                    <p>Engrais biologiques pour nourrir vos sols et plantes de manière naturelle.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Nous contacter</h2>
+            <div class="max-w-lg mx-auto">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <p class="text-center mb-4">Pour toute question ou demande de devis, envoyez-nous un message :</p>
+                    <div>
+                        <input type="text" placeholder="Votre nom" class="w-full p-3 mb-4 border rounded-lg" required>
+                        <input type="email" placeholder="Votre email" class="w-full p-3 mb-4 border rounded-lg" required>
+                        <textarea placeholder="Votre message" class="w-full p-3 mb-4 border rounded-lg" rows="5" required></textarea>
+                        <button class="bg-green-600 text-white px-6 py-3 rounded-full w-full hover:bg-green-700">Envoyer</button>
+                    </div>
+                    <div class="mt-6 text-center text-sm text-gray-700">
+                        <p><strong>Téléphones :</strong></p>
+                        <p>+221 78 354 56 01</p>
+                        <p>+221 76 528 95 22</p>
+                        <p class="mt-4"><strong>Email :</strong></p>
+                        <p><a href="mailto:heavenbusiness@gmail.com" class="text-green-700 hover:underline">heavenbusiness@gmail.com</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-green-600 text-white py-4">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 Heaven Business. Tous droits réservés.</p>
+            <p class="mt-2">
+                <a href="#accueil" class="hover:underline">Accueil</a> |
+                <a href="#a-propos" class="hover:underline">À propos</a> |
+                <a href="#services" class="hover:underline">Services</a> |
+                <a href="#contact" class="hover:underline">Contact</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
