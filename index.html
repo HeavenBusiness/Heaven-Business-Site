@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Heaven Business - Solutions pour espaces verts et microjardinage</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="font-sans text-gray-800">
+
     <!-- Header -->
     <header class="bg-green-600 text-white py-4">
         <div class="container mx-auto px-4 flex justify-between items-center">
-            <!-- Logo -->
-            <img src="logo.jpg" alt="Logo Heaven Business" class="h-16 mr-4"> <!-- Taille réduite du logo -->
-            <!-- Nom de l'entreprise -->
-            <h1 class="text-2xl font-bold">Heaven Business</h1>
+            <div class="flex items-center space-x-4">
+                <img src="logo.jpg" alt="Logo Heaven Business" class="h-12 w-auto">
+                <h1 class="text-2xl font-bold">Heaven Business</h1>
+            </div>
             <nav>
                 <ul class="flex space-x-6">
                     <li><a href="#accueil" class="hover:underline">Accueil</a></li>
@@ -49,29 +50,36 @@
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center mb-8">Nos Services</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-md">
+                <!-- Ajoute ici tes images personnalisées dans le dossier /images/ -->
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <img src="images/service1.jpg" alt="Aménagement" class="w-full h-40 object-cover mb-4 rounded">
                     <h3 class="text-xl font-semibold mb-2">Aménagement espace vert</h3>
-                    <p>Conception et entretien d'espaces verts pour particuliers et entreprises, avec une approche écologique.</p>
+                    <p>Conception et entretien d'espaces verts pour particuliers et entreprises.</p>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <img src="images/service2.jpg" alt="Formation" class="w-full h-40 object-cover mb-4 rounded">
                     <h3 class="text-xl font-semibold mb-2">Formation microjardinage</h3>
-                    <p>Apprenez les techniques de microjardinage pour cultiver vos propres légumes et plantes, même en espace réduit.</p>
+                    <p>Apprenez à jardiner efficacement même dans de petits espaces.</p>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <img src="images/service3.jpg" alt="Table de culture" class="w-full h-40 object-cover mb-4 rounded">
                     <h3 class="text-xl font-semibold mb-2">Vente table de culture</h3>
-                    <p>Tables de culture robustes et pratiques pour optimiser votre espace de jardinage.</p>
+                    <p>Des tables robustes pour vos plantations urbaines ou à la maison.</p>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <img src="images/service4.jpg" alt="Substrat" class="w-full h-40 object-cover mb-4 rounded">
                     <h3 class="text-xl font-semibold mb-2">Vente de substrat</h3>
-                    <p>Substrats de qualité pour garantir une croissance saine de vos plantes.</p>
+                    <p>Substrats de haute qualité pour la croissance optimale des plantes.</p>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <img src="images/service5.jpg" alt="Semences" class="w-full h-40 object-cover mb-4 rounded">
                     <h3 class="text-xl font-semibold mb-2">Vente de semences</h3>
-                    <p>Semences biologiques pour des cultures variées et respectueuses de l'environnement.</p>
+                    <p>Semences bio pour des cultures saines et diversifiées.</p>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <img src="images/service6.jpg" alt="Engrais" class="w-full h-40 object-cover mb-4 rounded">
                     <h3 class="text-xl font-semibold mb-2">Vente d'engrais bio</h3>
-                    <p>Engrais biologiques pour nourrir vos sols et plantes de manière naturelle.</p>
+                    <p>Engrais respectueux de l’environnement pour nourrir naturellement vos plantes.</p>
                 </div>
             </div>
         </div>
@@ -83,35 +91,42 @@
             <h2 class="text-3xl font-bold text-center mb-8">Nous contacter</h2>
             <div class="max-w-lg mx-auto">
                 <div class="bg-white p-6 rounded-lg shadow-md">
-                    <p class="text-center mb-4">Pour toute question ou demande de devis, envoyez-nous un message :</p>
-                    <div>
-                        <input type="text" placeholder="Votre nom" class="w-full p-3 mb-4 border rounded-lg" required>
-                        <input type="email" placeholder="Votre email" class="w-full p-3 mb-4 border rounded-lg" required>
-                        <textarea placeholder="Votre message" class="w-full p-3 mb-4 border rounded-lg" rows="5" required></textarea>
-                        <button class="bg-green-600 text-white px-6 py-3 rounded-full w-full hover:bg-green-700">Envoyer</button>
-                    </div>
+                    <p class="text-center mb-4">Envoyez-nous un message :</p>
+                    <form name="contact" method="POST" data-netlify="true">
+                        <input type="hidden" name="form-name" value="contact">
+                        <input type="text" name="nom" placeholder="Votre nom" required class="w-full p-3 mb-4 border rounded-lg">
+                        <input type="email" name="email" placeholder="Votre email" required class="w-full p-3 mb-4 border rounded-lg">
+                        <textarea name="message" placeholder="Votre message" required class="w-full p-3 mb-4 border rounded-lg" rows="5"></textarea>
+                        <button type="submit" class="bg-green-600 text-white px-6 py-3 rounded-full w-full hover:bg-green-700">Envoyer</button>
+                    </form>
+
+                    <!-- Bouton WhatsApp -->
+                    <a href="https://wa.me/221783545601" target="_blank" class="inline-flex items-center bg-green-500 text-white px-4 py-2 rounded-full mt-4 hover:bg-green-600 w-full justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10a9 9 0 0115.9-4.57l2.61-.87-.87 2.61A9 9 0 1112 3z" />
+                        </svg>
+                        Discuter sur WhatsApp
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-green-600 text-white py-4">
+    <footer class="bg-green-600 text-white py-6">
         <div class="container mx-auto px-4 text-center">
             <p>&copy; 2025 Heaven Business. Tous droits réservés.</p>
-            <p class="mt-2">
+            <p class="mt-2">Adresse : Yeumbeul Sud, Dakar</p>
+            <p>Téléphone : +221 78 354 5601 | +221 76 528 9522</p>
+            <p>Email : <a href="mailto:heavenbusiness01@gmail.com" class="underline">heavenbusiness01@gmail.com</a></p>
+            <div class="mt-4">
                 <a href="#accueil" class="hover:underline">Accueil</a> |
                 <a href="#a-propos" class="hover:underline">À propos</a> |
                 <a href="#services" class="hover:underline">Services</a> |
                 <a href="#contact" class="hover:underline">Contact</a>
-            </p>
-            <p class="mt-2">
-                <strong>Contactez-nous :</strong><br>
-                Téléphone : +221783545601 | +221765289522<br>
-                Email : <a href="mailto:heavenbusiness@gmail.com" class="hover:underline">heavenbusiness@gmail.com</a><br>
-                Adresse : Yeumbeul Sud, Dakar
-            </p>
+            </div>
         </div>
     </footer>
+
 </body>
 </html>
