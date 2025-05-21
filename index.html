@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Heaven Business propose des solutions durables pour l'aménagement d'espaces verts, la formation en microjardinage et la vente de produits bio à Dakar.">
     <title>Heaven Business - Solutions pour espaces verts et microjardinage</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
@@ -81,14 +82,24 @@
             <div class="max-w-lg mx-auto">
                 <div class="bg-white p-6 rounded-lg shadow-md">
                     <p class="text-center mb-4">Pour toute question ou demande de devis, envoyez-nous un message :</p>
-                    <form name="contact" method="POST" data-netlify="true" action="/merci.html">
+                    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
                         <input type="hidden" name="form-name" value="contact" />
-                        <div>
-                            <input type="text" name="nom" placeholder="Votre nom" class="w-full p-3 mb-4 border rounded-lg" required>
-                            <input type="email" name="email" placeholder="Votre email" class="w-full p-3 mb-4 border rounded-lg" required>
-                            <textarea name="message" placeholder="Votre message" class="w-full p-3 mb-4 border rounded-lg" rows="5" required></textarea>
-                            <button type="submit" class="bg-green-600 text-white px-6 py-3 rounded-full w-full hover:bg-green-700">Envoyer</button>
+                        <p class="hidden">
+                            <label>Ne remplissez pas ceci si vous êtes humain : <input name="bot-field" /></label>
+                        </p>
+                        <div class="mb-4">
+                            <label for="nom" class="block text-sm font-medium text-gray-700 mb-1">Nom</label>
+                            <input type="text" id="nom" name="nom" placeholder="Votre nom" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-green-600" required>
                         </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Votre email" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-green-600" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                            <textarea id="message" name="message" placeholder="Votre message" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-green-600" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="bg-green-600 text-white px-6 py-3 rounded-full w-full hover:bg-green-700">Envoyer</button>
                     </form>
                     <div class="mt-6 text-center">
                         <a href="https://wa.me/221783545601" class="bg-green-600 text-white px-6 py-3 rounded-full hover:bg-green-700">Contacter sur WhatsApp</a>
@@ -101,7 +112,7 @@
     <!-- Footer -->
     <footer class="bg-green-600 text-white py-4">
         <div class="container mx-auto px-4 text-center">
-            <p>&copy; 2025 Heaven Business. Tous droits réservés.</p>
+            <p>© 2025 Heaven Business. Tous droits réservés.</p>
             <p class="mt-2">
                 <a href="#accueil" class="hover:underline">Accueil</a> |
                 <a href="#a-propos" class="hover:underline">À propos</a> |
